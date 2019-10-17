@@ -38,18 +38,18 @@ class cluster():
 		cmap = matplotlib.colors.LinearSegmentedColormap.from_list("", tuples)
 		return(cmap)
 
-	def ward_dendogram(self, data):
+	def ward_dendrogram(self, data):
 		"""
 		Calculate and plot dendogram using Ward's method
 		(Hierarchical clustering)
 		"""
 		from matplotlib import pyplot as plt
 		import scipy.cluster.hierarchy as sch
-		# Plot dendogram
+		# Plot dendrogram
 		plt.figure(figsize=(10, 7))
-		plt.title('Dendogram')
+		plt.title('Dendrogram')
 		dend = sch.dendrogram(sch.linkage(data, method='ward'))
-		plt.savefig('dendogram.png')
+		plt.savefig('dendrogram.png')
 		plt.close()
 		return()
 		
